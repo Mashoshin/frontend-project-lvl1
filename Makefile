@@ -2,7 +2,8 @@ install:
 	 install-deps
 
 start:
-	npx babel-node src/bin/brain-games.js 
+	npx babel-node src/bin/brain-games.js
+ 
 
 install-deps:
 	 npm install
@@ -10,4 +11,4 @@ install-deps:
 publish:
 	npm publish --dry -run
 lint:
-	npx eslint 
+	npx eslint . 
