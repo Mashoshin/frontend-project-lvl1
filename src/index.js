@@ -3,23 +3,23 @@ import readlineSync from 'readline-sync';
 
 const questionCounter = 3;
 
-const defineEven = (number) => number%2 ===0;
+const defineEven = (number) => number % 2 === 0;
 
 const getRandomIntegerValue = (max, min) => Math.floor(Math.random() * (max - min)) + min;
 
 const getQuestionAndAnswer = () => {
-	const question = getRandomIntegerValue(20,1);
-	const correctAnsw = defineEven(question) ? 'yes': 'no';
-	return [question, correctAnsw];
+  const question = getRandomIntegerValue(20, 1);
+  const correctAnsw = defineEven(question) ? 'yes' : 'no';
+  return [question, correctAnsw];
 };
 
 const brainEvenStart = () => {
-   console.log('Welcome to the Brain Games!');
-   console.log('Answer "yes" if the number is even, otherwise answer "no"');
-   const userName = readlineSync.question('May I have your name?');
-   console.log(`Hello, ${userName} !`);
-   for (let i = 0; i < questionCounter; i++){
-	 const [question, correctAnswer] = getQuestionAndAnswer();
+  console.log('Welcome to the Brain Games!');
+  console.log('Answer "yes" if the number is even, otherwise answer "no"');
+  const userName = readlineSync.question('May I have your name?');
+  console.log(`Hello, ${userName} !`);
+  for (let i = 0; i < questionCounter; i = i + 1){  
+    const [question, correctAnswer] = getQuestionAndAnswer();
 
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
@@ -34,7 +34,7 @@ const brainEvenStart = () => {
   }
 
   console.log(`Congratulations, ${userName}`);
-}; 
+};
 
 
 export default brainEvenStart;
