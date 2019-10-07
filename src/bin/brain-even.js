@@ -1,7 +1,5 @@
 #!/usr/bin/node
 
-import brainEvenStart from '..';
+import brainEvenStart from '../games/brain-even';
 
 brainEvenStart();
-
-
