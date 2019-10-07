@@ -6,9 +6,9 @@
   "bin": {
     "brain-calc": "dist/bin/brain-calc.js",
     "brain-even": "dist/bin/brain-even.js",
-    "brain-games": "dist/bin/brain-games.js",
     "brain-gcd": "dist/bin/brain-gcd.js",
-    "brain-progression": "dist/bin/brain-progression.js"
+    "brain-progression": "dist/bin/brain-progression.js",
+    "brain-prime": "dist/bin/brain-prime.js"
   },
   "engines": {
     "node": ">=8"
@@ -21,7 +21,7 @@
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build"
   },
-  "author": "",
+  "author": "Mashoshin",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.6.2",

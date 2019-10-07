@@ -2,7 +2,7 @@ install:
 	 install-deps
 
 start:
-	npx babel-node src/bin/brain-progression.js
+	npx babel-node src/bin/brain-prime.js
 build:
 	rm -rf dist
 	npm run build 
