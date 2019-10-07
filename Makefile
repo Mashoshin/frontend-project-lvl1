@@ -2,7 +2,7 @@ install:
 	 install-deps
 
 start:
-	npx babel-node src/bin/brain-gcd.js
+	npx babel-node src/bin/brain-progression.js
 build:
 	rm -rf dist
 	npm run build 
