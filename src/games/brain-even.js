@@ -1,10 +1,9 @@
 import gameStart from '../index';
+import getRandomIntegerValue from '../random-value';
 
 const startMassage = 'Answer "yes" if the number is even, otherwise answer "no"';
 
 const defineEven = (number) => number % 2 === 0;
-
-const getRandomIntegerValue = (max, min) => Math.floor(Math.random() * (max - min)) + min;
 
 const getQuestionAndAnswer = () => {
   const question = getRandomIntegerValue(20, 1);

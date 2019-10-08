@@ -1,4 +1,5 @@
 import gameStart from '../index';
+import getRandomIntegerValue from '../random-value';
 
 const startMassage = 'Find the greatest common divisor of given numbers.';
 
@@ -8,8 +9,6 @@ const findGcd = (number1, number2) => {
   }
   return findGcd(number2, number1 % number2);
 };
-
-const getRandomIntegerValue = (max, min) => Math.floor(Math.random() * (max - min)) + min;
 
 const max = 20;
 const min = 1;

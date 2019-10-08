@@ -1,4 +1,5 @@
 import gameStart from '../index';
+import getRandomIntegerValue from '../random-value';
 
 const startMassage = 'What is the result of the expression?';
 
@@ -12,8 +13,6 @@ const operationMass = [{
   sign: '*',
   method: (a, b) => a * b,
 }];
-
-const getRandomIntegerValue = (max, min) => Math.floor(Math.random() * (max - min)) + min;
 
 const max = 10;
 const min = 1;

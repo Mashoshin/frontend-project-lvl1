@@ -1,4 +1,5 @@
 import gameStart from '../index';
+import getRandomIntegerValue from '../random-value';
 
 const startMassage = 'What number is missing in the progression?';
 
@@ -11,8 +12,6 @@ const generateProgression = (firstNumber, step) => {
   }
   return progression;
 };
-
-const getRandomIntegerValue = (max, min) => Math.floor(Math.random() * (max - min)) + min;
 
 const max = 10;
 const min = 1;
