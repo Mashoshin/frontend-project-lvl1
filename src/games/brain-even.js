@@ -1,14 +1,14 @@
-import gameStart from '../index';
+import playGame from '..';
 import getRandomIntegerValue from '../random-value';
 
-const startMassage = 'Answer "yes" if the number is even, otherwise answer "no"';
+const startMessage = 'Answer "yes" if the number is even, otherwise answer "no"';
 
-const defineEven = (number) => number % 2 === 0;
+const isEven = (number) => number % 2 === 0;
 
 const getQuestionAndAnswer = () => {
   const question = getRandomIntegerValue(20, 1);
-  const correctAnsw = defineEven(question) ? 'yes' : 'no';
-  return [question, correctAnsw];
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
+  return [question, correctAnswer];
 };
 
-export default () => gameStart(startMassage, getQuestionAndAnswer);
+export default () => playGame(startMessage, getQuestionAndAnswer);

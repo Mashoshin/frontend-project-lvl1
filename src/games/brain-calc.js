@@ -1,7 +1,7 @@
-import gameStart from '../index';
+import playGame from '..';
 import getRandomIntegerValue from '../random-value';
 
-const startMassage = 'What is the result of the expression?';
+const startMessage = 'What is the result of the expression?';
 
 const operationMass = [{
   sign: '+',
@@ -18,13 +18,14 @@ const max = 10;
 const min = 1;
 
 const getQuestionAndAnswer = () => {
-  const firstNumber = getRandomIntegerValue(max, min);
-  const secondNumber = getRandomIntegerValue(max, min);
-  const selectOperation = Math.floor(Math.random() * operationMass.length);
-  const currentOperation = operationMass[selectOperation].sign;
-  const question = `${firstNumber}${currentOperation}${secondNumber}`;
-  const correctAnsw = operationMass[selectOperation].method(firstNumber, secondNumber);
-  return [question, String(correctAnsw)];
+  const firstMemberOfOperation = getRandomIntegerValue(max, min);
+  const secondMemberOfOperation = getRandomIntegerValue(max, min);
+  const selectOperation = getRandomIntegerValue(2, 0);
+  const currentOperation = operationMass[selectOperation];
+  const currentOperationName = currentOperation.sign;
+  const question = `${firstMemberOfOperation}${currentOperationName}${secondMemberOfOperation}`;
+  const correctAnswer = currentOperation.method(firstMemberOfOperation, secondMemberOfOperation);
+  return [question, String(correctAnswer)];
 };
 
-export default () => gameStart(startMassage, getQuestionAndAnswer);
+export default () => playGame(startMessage, getQuestionAndAnswer);

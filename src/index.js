@@ -1,13 +1,13 @@
 import readlineSync from 'readline-sync';
 
-const questionCounter = 3;
+const questionCount = 3;
 
-const gameStart = (startMassage, getQuestionAndAnswer) => {
+const playGame = (startMessage, getQuestionAndAnswer) => {
   console.log('Welcome to the Brain Games!');
-  console.log(startMassage);
+  console.log(startMessage);
   const userName = readlineSync.question('May I have your name?');
   console.log(`Hello, ${userName} !`);
-  for (let i = 0; i < questionCounter; i += 1) {
+  for (let i = 0; i < questionCount; i += 1) {
     const [question, correctAnswer] = getQuestionAndAnswer();
 
     console.log(`Question: ${question}`);
@@ -26,4 +26,4 @@ const gameStart = (startMassage, getQuestionAndAnswer) => {
 };
 
 
-export default gameStart;
+export default playGame;

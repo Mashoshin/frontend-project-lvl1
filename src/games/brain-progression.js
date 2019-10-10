@@ -1,30 +1,30 @@
-import gameStart from '../index';
+import playGame from '..';
 import getRandomIntegerValue from '../random-value';
 
-const startMassage = 'What number is missing in the progression?';
+const startMessage = 'What number is missing in the progression?';
 
-const generateProgression = (firstNumber, step) => {
-  let progression = [firstNumber];
-  let nextNum = firstNumber;
-  for (let i = 0; i < 10; i += 1) {
-    nextNum += step;
-    progression = [...progression, nextNum];
+const progressionLength = 10;
+
+const generateProgression = (firstNum, step) => {
+  let progression = [];
+  for (let i = 0; i < progressionLength; i += 1) {
+    progression = [...progression, i * step + firstNum];
   }
   return progression;
 };
 
 const max = 10;
-const min = 1;
+const min = 0;
 
 const getQuestionAndAnswer = () => {
-  const firstNumber = getRandomIntegerValue(max, min);
-  const step = getRandomIntegerValue(max, min);
-  const guessNumber = getRandomIntegerValue(max, min);
-  const progression = generateProgression(firstNumber, step);
-  const correctAnsw = progression[guessNumber];
-  progression[guessNumber] = '..';
+  const progressionFirstPoint = getRandomIntegerValue(max, min);
+  const progressionStep = getRandomIntegerValue(max, min);
+  const indexOfHiddenElement = getRandomIntegerValue(progressionLength - 1, min);
+  const progression = generateProgression(progressionFirstPoint, progressionStep);
+  const correctAnswer = progression[indexOfHiddenElement];
+  progression[indexOfHiddenElement] = '..';
   const question = `${progression.join(' ')}`;
-  return [question, String(correctAnsw)];
+  return [question, String(correctAnswer)];
 };
 
-export default () => gameStart(startMassage, getQuestionAndAnswer);
+export default () => playGame(startMessage, getQuestionAndAnswer);

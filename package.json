@@ -10,7 +10,6 @@
     "brain-progression",
     "brain-prime"
   ],
-  "main": "index.js",
   "bin": {
     "brain-calc": "dist/bin/brain-calc.js",
     "brain-even": "dist/bin/brain-even.js",
@@ -42,14 +41,12 @@
     "@babel/node": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
     "babel-eslint": "^10.0.3",
-    "eslint": "^6.5.0",
+    "eslint": "^6.5.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-import": "^2.18.2"
   },
   "dependencies": {
-    "eslint-plugin-jest": "^22.17.0",
-    "jest": "^24.9.0",
     "readline-sync": "^1.4.10"
   }
 }
