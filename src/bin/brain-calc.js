@@ -1,5 +1,5 @@
 #!/usr/bin/node
 
-import brainCalcStart from '../games/brain-calc';
+import brainCalcStart from '../games/calc';
 
 brainCalcStart();

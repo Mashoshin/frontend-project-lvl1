@@ -1,5 +1,5 @@
 import playGame from '..';
-import getRandomIntegerValue from '../random-value';
+import getRandomInteger from '../random-value';
 
 const startMessage = 'Find the greatest common divisor of given numbers.';
 
@@ -14,10 +14,10 @@ const max = 20;
 const min = 1;
 
 const getQuestionAndAnswer = () => {
-  const firstNum = getRandomIntegerValue(max, min);
-  const secondNum = getRandomIntegerValue(max, min);
-  const question = `${firstNum} ${secondNum}`;
-  const correctAnswer = findGcd(firstNum, secondNum);
+  const a = getRandomInteger(min, max);
+  const b = getRandomInteger(min, max);
+  const question = `${a} ${b}`;
+  const correctAnswer = findGcd(a, b);
   return [question, String(correctAnswer)];
 };
 

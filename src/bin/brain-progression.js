@@ -1,5 +1,5 @@
 #!/usr/bin/node
 
-import brainProgressionStart from '../games/brain-progression';
+import brainProgressionStart from '../games/progression';
 
 brainProgressionStart();

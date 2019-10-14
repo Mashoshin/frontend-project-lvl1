@@ -1,4 +1,4 @@
+const getRandomInteger = (min, max) => Math.floor(Math.random() * (max + 1 - min)) + min;
+// the generator returns both boundaries
 
-const getRandomIntegerValue = (max, min) => Math.floor(Math.random() * (max + 1 - min)) + min;
-
-export default getRandomIntegerValue;
+export default getRandomInteger;

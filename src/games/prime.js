@@ -1,5 +1,5 @@
 import playGame from '..';
-import getRandomIntegerValue from '../random-value';
+import getRandomInteger from '../random-value';
 
 const startMessage = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -21,9 +21,8 @@ const max = 20;
 const min = 1;
 
 const getQuestionAndAnswer = () => {
-  const number = getRandomIntegerValue(max, min);
-  const correctAnswer = isPrime(number) ? 'yes' : 'no';
-  const question = number;
+  const question = getRandomInteger(min, max);
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
